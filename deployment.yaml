@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: simian-human
-        image: brunooliveiramac/mercado-livre
+        image: brunooliveiramac/simian-human
         ports:
         - containerPort: 8080
           name: server
