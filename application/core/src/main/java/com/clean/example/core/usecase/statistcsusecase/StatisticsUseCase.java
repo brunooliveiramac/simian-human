@@ -20,7 +20,7 @@ public class StatisticsUseCase {
 
         List<DNAEntity> dnaEntities = obtemDNAs.listAll();
 
-        if(dnaEntities.size() == 0){
+        if (dnaEntities.size() == 0) {
             return DNAStatistics.empty();
         }
 
@@ -30,7 +30,7 @@ public class StatisticsUseCase {
         Long simian = collect.get(DNAType.SIMIAN);
         Long human = collect.get(DNAType.HUMAN);
 
-        Long ratio = simian / dnaEntities.size();
+        double ratio = ((double) simian / dnaEntities.size());
 
         return DNAStatistics.newBuilder()
                 .human(human)

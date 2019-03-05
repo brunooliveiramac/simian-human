@@ -7,7 +7,7 @@ public class StatisticsModel {
 
     private Long count_mutant_dna;
 
-    private Long ratio;
+    private double ratio;
 
     private StatisticsModel(Builder builder) {
         setCount_human_dna(builder.human);
@@ -35,18 +35,18 @@ public class StatisticsModel {
         this.count_mutant_dna = count_mutant_dna;
     }
 
-    public Long getRatio() {
+    public Double getRatio() {
         return ratio;
     }
 
-    public void setRatio(Long ratio) {
+    public void setRatio(double ratio) {
         this.ratio = ratio;
     }
 
     public static final class Builder {
         private Long human;
         private Long simian;
-        private Long ratio;
+        private double ratio;
 
         private Builder() {
         }
@@ -61,7 +61,7 @@ public class StatisticsModel {
             return this;
         }
 
-        public Builder ratio(Long val) {
+        public Builder ratio(double val) {
             ratio = val;
             return this;
         }

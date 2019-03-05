@@ -7,7 +7,7 @@ public class DNAStatistics {
 
     private Long simian;
 
-    private Long ratio;
+    private double ratio;
 
     private DNAStatistics(Builder builder) {
         setHuman(builder.human);
@@ -36,11 +36,11 @@ public class DNAStatistics {
         this.simian = simian;
     }
 
-    public Long getRatio() {
+    public double getRatio() {
         return ratio;
     }
 
-    public void setRatio(Long ratio) {
+    public void setRatio(double ratio) {
         this.ratio = ratio;
     }
 
@@ -52,7 +52,7 @@ public class DNAStatistics {
     public static final class Builder {
         private Long human;
         private Long simian;
-        private Long ratio;
+        private double ratio;
 
         private Builder() {
         }
@@ -67,7 +67,7 @@ public class DNAStatistics {
             return this;
         }
 
-        public Builder ratio(Long val) {
+        public Builder ratio(double val) {
             ratio = val;
             return this;
         }
